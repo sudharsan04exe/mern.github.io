@@ -42,6 +42,11 @@
       border-style: solid;
       border-radius:10px;
       background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(228, 170, 98));
+      box-shadow: 0 0 25px rgba(32, 17, 117, 0.2);
+      animation: gradientAnimation 10s infinite alternate;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      will-change: transform;
     }
 
     .intro h1 {
@@ -69,7 +74,8 @@
         border-style: solid;
         border-radius:10px;
         margin-top: 10px;
-        
+        transition: box-shadow 0.3s ease;
+
   background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(228, 170, 98));
 
     }
@@ -84,12 +90,13 @@
         margin-left:25px;
     }
     .contact{
-        border-color: rgb(24, 18, 79);
-        border-style: solid;
-        border-radius:10px;
-        margin-top: 10px;
-        padding-left:20px;
-        background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(243, 191, 129));
+      border-color: rgb(24, 18, 79);
+      border-style: solid;
+      border-radius:10px;
+      margin-top: 10px;
+      padding-left:20px;
+      background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(243, 191, 129));
+      box-shadow: 0 0 20px rgba(128, 57, 57, 0.2);
     }
     img{
         border-radius: 100%;
@@ -109,13 +116,34 @@
         border-color:#fff;
         border-style:solid;
         border-width:7px;
+        box-shadow: 0 0 20px rgba(128, 57, 57, 0.2);
+        
     }
     .skills:hover{
         
         border-color:#fff;
         border-style:solid;
         border-width:7px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
     }
+    #skills:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#skills li {
+    transition: transform 0.3s ease;
+}
+
+#skills li:hover {
+    transform: translateX(10px); 
+}
+#skills ul {
+    list-style-type: none;
+}
+
     #projects:hover{
         
         border-color:#ffffff;
@@ -143,6 +171,7 @@
         border-style:solid;
         border-width:3px;
         border-radius:25%;
+      
     }
    
   </style>
@@ -174,6 +203,7 @@
             <li>CSS</li>
             <li>JavaScript⚡</li>
             <li>Python</li>
+            <li>C++</li>
             <li>Java☕</li>
         </ul>
     </section>
