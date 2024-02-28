@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div{
+        height:100px;
+        width:100px;
+        border-radius: 100%;
+        background-color: bisque; 
+        animation-name:test;
+        animation-duration:5s;
+        position:relative;
+        animation-iteration-count: infinite;
+    }
+    @keyframes test{
+       0%{
+           background-color: bisque;top:0px;left:0px;
+       }
+         25%{
+              background-color: blue; top:100px;right:0px;
+         }
+            50%{
+                background-color: green;top:0px;left:100px;
+            }
+                75%{
+                    background-color: yellow;bottom:50px;right:100px;
+                }
+                    100%{
+                        background-color: red;top:0px;left:0px;
+                    }
+    }
+    </style>
+    
+</head>
+<body>
+    <div></div>
+</body>
+</html>

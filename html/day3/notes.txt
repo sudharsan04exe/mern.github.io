@@ -1,0 +1,19 @@
+
+javascript
+
+   let -- scope within the block
+   var -- scope within  the function
+   const -- immutable
+   let a=5;
+
+
+   
+undefined
+let b=prompt("Enter");
+undefined
+console.log(a+b);
+VM216:1 54
+undefined
+console.log(a+parseInt(b));
+VM247:1 9
+undefined
