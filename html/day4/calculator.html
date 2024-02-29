@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p><label for="number">firstname:   </label>
+            <input type="text" id="num1" required><br></p>  
+        <p><label for="number">lastname:   </label>
+            <input type="text" id="num2" required><br></p>  
+        <p><label for="number">concat:   </label>
+            <input type="text" id="operation" required><br></p>
+         <button type="button" onclick="calc()">calc</button>
+         <script>
+            function calc(){
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                var operation = document.getElementById("operation").value;
+                var result = 0;
+                if(operation == "+"){
+                    result = num1 + num2;
+                }
+                else if(operation == "-"){
+                    result = parseInt(num1) - parseInt(num2);
+                }
+                else if(operation == "*"){
+                    result = parseInt(num1) * parseInt(num2);
+                }
+                else if(operation == "/"){
+                    result = parseInt(num1) / parseInt(num2);
+                }
+                alert(result);  
+            }   
+        </script>
+    </form>
+</body>
+</html>

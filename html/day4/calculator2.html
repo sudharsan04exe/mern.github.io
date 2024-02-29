@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       button {
+      width: 30px;
+      height: 30px;
+      display: flexbox;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    #display {
+      width: 24%;
+      height: 50px;
+      padding: 6px;
+      font-size: 18px;
+      border: 1px solid #ccc; 
+    }
+    #calculator{
+        display: flexbox;
+        flex-direction: column;
+        justify-content: center;
+        border-width:5px;
+        border-color: black;
+        border-style: solid;
+        padding: 10px;
+        border-width:40%; }
+    
+       
+    </style>
+</head>
+<body>
+        <div id="calculator">
+            <textarea id="display"></textarea>
+            <br>
+            <button onclick="display(7)">7</button>
+            <button onclick="display(8)">8</button>
+            <button onclick="display(9)">9</button>
+            <button onclick="display('/')">/</button>
+            <br>
+            <button onclick="display(4)">4</button>
+            <button onclick="display(5)">5</button>
+            <button onclick="display(6)">6</button>
+            <button onclick="display('*')">*</button>
+            <br>
+            <button onclick="display(1)">1</button>
+            <button onclick="display(2)">2</button>
+            <button onclick="display(3)">3</button>
+            <button onclick="display('-')">-</button>
+            <br>
+            <button onclick="display(0)">0</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="Clear('C')">C</button>
+          </div>
+        <script>
+   function display(value) {
+   const displayElement = document.getElementById("display");
+    displayElement.value += value;
+  }
+
+  function calculate() {
+    const displayElement = document.getElementById("display");
+    const expression = displayElement.value;
+
+    if (expression) {
+      displayElement.value = eval(expression);
+  }
+}
+  function Clear() {    
+    const displayElement = document.getElementById("display");      
+    displayElement.value ='';
+           }
+        </script>
+        
+</body>
+</html>
