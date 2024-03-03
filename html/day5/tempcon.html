@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #ans {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #010000;
+            border-radius: 5px;
+            font-family:'Times New Roman', Times, serif;
+            font-size:large;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p><h1>TEMP CONVERTER</h1></p>
+        <p><label for="number">Enter the temperature:   </label>
+            <input type="number" id="num1" required><br></p>  
+            <p>
+                <select id="convert">
+                    <option id="CtoF">CtoF</option>
+                    <option id="FtoC">FtoC</option>
+                </select>
+            </p>
+         <button type="button" onclick="calc()">calc</button>
+         <p><textarea id="ans">conversion</textarea></p>
+         <script>
+            function calc(){
+                    var temperature = parseFloat(document.getElementById("num1").value);
+                    var operation = document.getElementById("convert").value;
+                    var result;
+                    if(operation === "CtoF"){
+                        result = (temperature * 9/5) + 32;
+                    } else if(operation === "FtoC"){
+                        result = (temperature - 32) * 5/9;
+                    } else {
+                        result= 0.00;
+                    }
+                    document.getElementById("ans").value = result;
+                }
+            </script>
+    </form>
+</body>
+</html>

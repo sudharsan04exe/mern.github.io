@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zpPOesMW1yn1q5LdYRW5i+9AOcA2KUWcQwwBlbOhz53g1J1p7aUxMQ5ol1wMz+jJ24pYWefL3gdtXn8tJJuC4w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="login.CSS">   
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+        <div class="form-group">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <span></span> 
+        </div>
+        <div class="form-group">
+            <div class="password-input-container">
+                <input type="password" id="password" name="password"  placeholder="Password" required>
+                <span class="password-toggle" onclick="togglePasswordVisibility()">
+                    &#128065;<!-- Eye icon -->
+                </span>
+            </div>
+        </div>
+       
+        <button class="glow-on-hover" type="submit">Login</button>
+        <div class="register-link">
+            <span>Don't have an account? <a href="register.html">Register</a></span>
+        </div>
+    </form>
+    <script src="Login.Js"></script>
+</div>
+<script>
+  function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}
+</script>
+</body>
+</html>

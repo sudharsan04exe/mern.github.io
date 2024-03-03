@@ -1,0 +1,126 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    background-image: url("timg.jpg");
+    overflow: none;
+   
+    background-size: cover;
+    overflow: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    background-color: #daccf1ee;
+    opacity: 0.8;
+   
+    height: 50%;
+    padding: 40px;
+    border-radius: 12.5px;
+    box-shadow: 0 0 10px rgba(22, 4, 39, 0.1);
+    align-self: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.form-group input::placeholder {
+    position: relative;
+}
+
+.form-group input::placeholder::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #666;
+    bottom: 10px;
+    left: 0;
+}
+
+.form-group input::placeholder {
+    position: relative;
+    color: #999;
+}
+
+.form-group input::placeholder::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #666;
+    bottom: 10px;
+    left: 0;
+}
+
+button[type="submit"] {
+    background-color: #190b29eb;
+    color: #EDF4F2;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #372157e9;
+}
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #0a0412;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.register-link a:hover {
+    color: #6100e8;
+}
+
+.glow-on-hover {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 10px 2px #73a6dc;
+}
