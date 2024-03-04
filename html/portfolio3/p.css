@@ -317,7 +317,7 @@ body, h1, h2, h3, p, ul, li {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
   }
   .intro img{
-    margin-bottom: -7px;
+    margin-bottom: -5px;
     height:35px;
     width:35px;
   }
