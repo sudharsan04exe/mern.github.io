@@ -20,7 +20,7 @@
             <div class="password-input-container">
                 <input type="password" id="password" name="password"  placeholder="Password" required>
                 <span class="password-toggle" onclick="togglePasswordVisibility()">
-                    &#128065;<!-- Eye icon -->
+                    &#128065;
                 </span>
             </div>
         </div>
@@ -41,7 +41,25 @@
     } else {
         passwordInput.type = "password";
     }
-}
+  }
+
+  document.querySelector('button[type="submit"]').addEventListener('click', function (event) {
+        var usernameInput = document.getElementById("username");
+        var passwordInput = document.getElementById("password");
+
+        if (usernameInput.value.trim() === "" || passwordInput.value.trim() === "") {
+            event.preventDefault(); // Prevents the form from submitting
+
+            // Display a customized required message
+            var errorMessage = document.createElement("div");
+            errorMessage.innerHTML = "Please fill in both username and password fields.";
+            errorMessage.style.color = "red";
+            errorMessage.style.marginTop = "5px";
+
+            // Insert the error message after the form
+            document.querySelector('.container').appendChild(errorMessage);
+        }
+    });
 </script>
 </body>
 </html>

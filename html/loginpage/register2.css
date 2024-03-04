@@ -124,3 +124,15 @@ button[type="submit"]:hover {
 .glow-on-hover:hover {
     box-shadow: 0 0 10px 2px #73a6dc;
 }
+
+.password-input-container {
+    position: relative;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }

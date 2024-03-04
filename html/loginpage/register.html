@@ -21,18 +21,79 @@
                   <span></span>
               </div>
               <div class="form-group">
+                <div class="password-input-container">
                   <input type="password" id="password"  name="password" placeholder="password" required>
-                  <span></span>
+                  <span class="password-toggle" onclick="togglePasswordVisibility()">
+                    &#128065;
+                </span>
+                </div>
               </div>
               <div class="form-group">
+                <div class="password-input-container">
                   <input type="password" id="ConfirmPassword" name="cpassword" placeholder="ConfirmPassword" required>
-                  <span></span>
+                  <span class="password-toggle" onclick="togglePasswordVisibility()">
+                    &#128065;
+                </span>
+                </div>
               </div>    
-                <button class="glow-on-hover" type="submit">Signup</button>        
+                <button class="glow-on-hover" type="submit" onclick="validateForm()">Signup</button>        
             <div class="register-link">
                   Have an Account ? <a href="login.html">Login</a>
             </div>
           </form>
       </div>
+      <script>
+        function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+  }
+        function validateForm() {
+            var usernameInput = document.getElementById("username");
+            var emailInput = document.getElementById("email");
+            var passwordInput = document.getElementById("password");
+            var confirmPasswordInput = document.getElementById("confirmPassword");
+
+            if (usernameInput.value.trim() === "" || emailInput.value.trim() === "" || passwordInput.value.trim() === "" || confirmPasswordInput.value.trim() === "") {
+                // Display a customized required message
+                var errorMessage = document.createElement("div");
+                errorMessage.innerHTML = "Please fill in all fields.";
+                errorMessage.style.color = "red";
+                errorMessage.style.marginTop = "5px";
+
+                // Check if an error message already exists and remove it
+                var existingErrorMessage = document.querySelector('.container div.error-message');
+                if (existingErrorMessage) {
+                    existingErrorMessage.remove();
+                }
+
+                // Insert the error message after the form
+                document.querySelector('.container').appendChild(errorMessage);
+            } else if (passwordInput.value !== confirmPasswordInput.value) {
+                // Display a customized error message for password mismatch
+                var errorMessage = document.createElement("div");
+                errorMessage.innerHTML = "Passwords do not match.";
+                errorMessage.style.color = "red";
+                errorMessage.style.marginTop = "5px";
+                errorMessage.className = 'error-message';
+
+                // Check if an error message already exists and remove it
+                var existingErrorMessage = document.querySelector('.container div.error-message');
+                if (existingErrorMessage) {
+                    existingErrorMessage.remove();
+                }
+
+                // Insert the error message after the form
+                document.querySelector('.container').appendChild(errorMessage);
+            } else {
+                // If validation passes, submit the form (you can replace this with your actual form submission logic)
+                document.getElementById("registerForm").submit();
+            }
+        }
+    </script>
   </body>
 </html>
